@@ -72,7 +72,7 @@ class TBLRBBoxCoder(BaseBBoxCoder):
         return decoded_bboxes
 
 
-@mmcv.jit(coderize=True)
+@mmcv.utils.jit(coderize=True)
 def bboxes2tblr(priors, gts, normalizer=4.0, normalize_by_wh=True):
     """Encode ground truth boxes to tblr coordinate.
 
@@ -119,7 +119,7 @@ def bboxes2tblr(priors, gts, normalizer=4.0, normalize_by_wh=True):
     return loc / normalizer
 
 
-@mmcv.jit(coderize=True)
+@mmcv.utils.jit(coderize=True)
 def tblr2bboxes(priors,
                 tblr,
                 normalizer=4.0,
