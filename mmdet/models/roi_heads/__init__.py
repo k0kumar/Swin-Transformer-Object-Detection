@@ -13,7 +13,7 @@ from .bbox_heads import (BBoxHead, ConvFCBBoxHead,
 # from .mask_scoring_roi_head import MaskScoringRoIHead
 # from .pisa_roi_head import PISARoIHead
 # from .point_rend_roi_head import PointRendRoIHead
-# from .roi_extractors import SingleRoIExtractor
+from .roi_extractors import SingleRoIExtractor
 # from .scnet_roi_head import SCNetRoIHead
 # from .shared_heads import ResLayer
 # from .sparse_roi_head import SparseRoIHead
@@ -35,5 +35,5 @@ from .standard_roi_head import StandardRoIHead
 __all__ = [
     'BaseRoIHead','BBoxHead',
     'ConvFCBBoxHead', 'Shared2FCBBoxHead', 'StandardRoIHead',
-    'Shared4Conv1FCBBoxHead'
+    'Shared4Conv1FCBBoxHead','SingleRoIExtractor',
 ]
