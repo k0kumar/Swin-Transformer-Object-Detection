@@ -1,6 +1,6 @@
 import warnings
 
-from mmengine.registry import Registry, build_from_cfg
+from mmdet.utils.registry import Registry, build_from_cfg
 from torch import nn
 
 BACKBONES = Registry('backbone')
