@@ -4,8 +4,8 @@ import warnings
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from mmcv import ConfigDict
-from mmcv.cnn import normal_init
+from mmengine.config import ConfigDict
+from mmengine.model import normal_init
 from mmcv.ops import batched_nms
 
 from ..builder import HEADS
