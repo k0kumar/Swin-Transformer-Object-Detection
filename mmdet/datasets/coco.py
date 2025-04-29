@@ -7,7 +7,7 @@ from collections import OrderedDict
 import mmcv
 import numpy as np
 import pycocotools
-from mmcv.utils import print_log
+from mmdet.utils.logger import print_log
 from pycocotools.coco import COCO
 from pycocotools.cocoeval import COCOeval
 from terminaltables import AsciiTable
