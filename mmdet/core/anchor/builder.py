@@ -1,4 +1,4 @@
-from mmengine.registry import Registry, build_from_cfg
+from mmdet.utils.registry import Registry, build_from_cfg
 
 ANCHOR_GENERATORS = Registry('Anchor generator')
 
