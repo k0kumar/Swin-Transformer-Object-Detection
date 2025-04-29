@@ -39,4 +39,4 @@ from .rpn_head import RPNHead
 #     'SABLRetinaHead', 'CentripetalHead', 'VFNetHead', 'TransformerHead',
 #     'StageCascadeRPNHead', 'CascadeRPNHead', 'EmbeddingRPNHead', 'LDHead'
 # ]
-__all__ ['RPNHead']
+__all__ = ['RPNHead']
