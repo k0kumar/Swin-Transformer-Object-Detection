@@ -23,7 +23,7 @@ from .utils import (NumClassCheckHook, get_loading_pipeline,
 #     'NumClassCheckHook'
 # ]
 
-__all__ [
+__all__ = [
   'DATASETS', 'PIPELINES', 'build_dataloader', 'build_dataset',
   'CocoDataset','ClassBalancedDataset', 'ConcatDataset','RepeatDataset',
   'DistributedGroupSampler', 'DistributedSampler', 'GroupSampler',
