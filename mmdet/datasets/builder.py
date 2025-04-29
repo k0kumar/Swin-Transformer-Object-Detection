@@ -6,7 +6,7 @@ from functools import partial
 import numpy as np
 from mmdet.utils.collate_scatter import collate
 from mmengine.dist import get_dist_info
-from mmengine import Registry, build_from_cfg
+from mmdet.utils.registry import Registry, build_from_cfg
 from torch.utils.data import DataLoader
 
 from .samplers import DistributedGroupSampler, DistributedSampler, GroupSampler
