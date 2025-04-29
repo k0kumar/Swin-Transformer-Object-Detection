@@ -7,7 +7,7 @@ from ..builder import LOSSES
 from .utils import weighted_loss
 
 
-@mmcv.jit(derivate=True, coderize=True)
+@mmcv.utils.jit(derivate=True, coderize=True)
 @weighted_loss
 def balanced_l1_loss(pred,
                      target,
