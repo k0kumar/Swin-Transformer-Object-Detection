@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from mmcv.cnn import normal_init
+from mmengine.model import normal_init
 from mmcv.runner import force_fp32
 
 from mmdet.core import (anchor_inside_flags, build_anchor_generator,
