@@ -1,4 +1,4 @@
-from mmcv.utils import Registry, build_from_cfg
+from mmengine.registry import Registry, build_from_cfg
 
 BBOX_ASSIGNERS = Registry('bbox_assigner')
 BBOX_SAMPLERS = Registry('bbox_sampler')
