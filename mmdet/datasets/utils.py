@@ -7,7 +7,7 @@ from mmengine.hooks import Hook
 
 from mmdet.datasets.builder import PIPELINES
 from mmdet.datasets.pipelines import LoadAnnotations, LoadImageFromFile
-from mmdet.models.dense_heads import GARPNHead, RPNHead
+from mmdet.models.dense_heads import RPNHead
 from mmdet.models.roi_heads.mask_heads import FusedSemanticHead
 
 
