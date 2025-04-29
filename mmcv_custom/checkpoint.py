@@ -18,7 +18,7 @@ from torch.nn import functional as F
 import mmcv
 from mmengine.fileio import FileClient
 from mmengine.fileio import load as load_file
-from mmengine.model import is_model_wrapper
+from mmengine.model import is_model_wrapper as is_module_wrapper
 from mmengine.utils import mkdir_or_exist
 from mmengine.dist import get_dist_info
 
