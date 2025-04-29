@@ -3,7 +3,7 @@ from collections.abc import Sequence
 import mmcv
 import numpy as np
 import torch
-from mmcv.parallel import DataContainer as DC
+from mmdet.utils.collate_scatter import DataContainer as DC
 
 from ..builder import PIPELINES
 
