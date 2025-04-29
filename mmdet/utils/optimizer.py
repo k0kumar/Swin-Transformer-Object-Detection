@@ -5,6 +5,26 @@ try:
 except:
     print('apex is not installed')
 
+import copy
+import logging
+# from itertools import chain
+from typing import Optional, Union
+
+import torch.nn as nn
+from torch import Tensor
+from torch.nn.utils import clip_grad
+from mmengine.device import is_npu_available as IS_NPU_AVAILABLE
+from mmengine.utils.dl_utils import TORCH_VERSION
+try:
+    # If PyTorch version >= 1.6.0, torch.cuda.amp.GradScaler would be imported
+    # and used; otherwise, auto fp16 will adopt mmcv's implementation.
+    if IS_NPU_AVAILABLE:
+        from torch.npu.amp import GradScaler
+    else:
+        from torch.cuda.amp import GradScaler
+except ImportError:
+    pass
+
 @HOOKS.register_module()
 class OptimizerHook(Hook):
     """A hook contains custom operations for the optimizer.
