@@ -1,4 +1,5 @@
-from mmcv.runner import OptimizerHook, HOOKS
+from mmengine.optim import OptimWrapper as OptimizerHook
+from mmengine.registry import HOOKS
 try:
     import apex
 except:
