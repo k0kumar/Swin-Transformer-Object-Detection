@@ -2,8 +2,9 @@ import warnings
 
 import torch.nn as nn
 import torch.nn.functional as F
-from mmcv.cnn import ConvModule, xavier_init
-from mmcv.runner import auto_fp16
+from mmcv.cnn import ConvModule
+from mmengine.model import xavier_init
+from mmdet.utils.fp16_utils import auto_fp16
 
 from ..builder import NECKS
 
