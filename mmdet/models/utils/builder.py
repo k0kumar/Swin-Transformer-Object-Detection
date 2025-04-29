@@ -1,4 +1,4 @@
-from mmcv.utils import Registry, build_from_cfg
+from mmengine import Registry, build_from_cfg
 
 TRANSFORMER = Registry('Transformer')
 POSITIONAL_ENCODING = Registry('Position encoding')
