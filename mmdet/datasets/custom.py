@@ -4,7 +4,7 @@ from collections import OrderedDict
 
 import mmcv
 import numpy as np
-from mmcv.utils import print_log
+from mmdet.utils.logger import print_log
 from torch.utils.data import Dataset
 
 from mmdet.core import eval_map, eval_recalls
