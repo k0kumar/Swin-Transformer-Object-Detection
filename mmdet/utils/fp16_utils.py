@@ -10,9 +10,11 @@ import torch
 import torch.nn as nn
 from torch.nn.parameter import Parameter
 
-from mmcv.utils import IS_NPU_AVAILABLE, TORCH_VERSION, digit_version
 from .dist_utils import allreduce_grads as _allreduce_grads
 
+from mmengine.utils.dl_utils import TORCH_VERSION
+from mmengine.device import is_npu_available as IS_NPU_AVAILABLE
+from mmengine.utils import digit_version
 try:
     # If PyTorch version >= 1.6.0, torch.cuda.amp.autocast would be imported
     # and used; otherwise, auto fp16 will adopt mmcv's implementation.
