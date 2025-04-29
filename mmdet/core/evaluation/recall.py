@@ -1,7 +1,7 @@
 from collections.abc import Sequence
 
 import numpy as np
-from mmcv.utils import print_log
+from mmdet.utils.logger import print_log
 from terminaltables import AsciiTable
 
 from .bbox_overlaps import bbox_overlaps
