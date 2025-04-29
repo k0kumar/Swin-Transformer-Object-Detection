@@ -6,7 +6,7 @@ from ..builder import LOSSES
 from .utils import weight_reduce_loss
 
 
-@mmcv.jit(derivate=True, coderize=True)
+@mmcv.utils.jit(derivate=True, coderize=True)
 def varifocal_loss(pred,
                    target,
                    weight=None,
