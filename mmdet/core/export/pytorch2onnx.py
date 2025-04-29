@@ -3,7 +3,7 @@ from functools import partial
 import mmcv
 import numpy as np
 import torch
-from mmcv.runner import load_checkpoint
+from mmengine.runner import load_checkpoint
 
 
 def generate_inputs_and_wrap_model(config_path,
