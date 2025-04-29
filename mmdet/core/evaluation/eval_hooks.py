@@ -4,7 +4,7 @@ from math import inf
 
 import mmcv
 import torch.distributed as dist
-from mmcv.runner import Hook
+from mmengine.hooks import Hook
 from torch.nn.modules.batchnorm import _BatchNorm
 from torch.utils.data import DataLoader
 
