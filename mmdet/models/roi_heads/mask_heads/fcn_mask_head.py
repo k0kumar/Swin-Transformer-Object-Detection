@@ -4,7 +4,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from mmcv.cnn import Conv2d, ConvModule, build_upsample_layer
 from mmcv.ops.carafe import CARAFEPack
-from mmcv.runner import auto_fp16, force_fp32
+from mmdet.utils.fp16utils import auto_fp16, force_fp32
 from torch.nn.modules.utils import _pair
 
 from mmdet.core import mask_target
