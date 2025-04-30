@@ -82,7 +82,7 @@ def inference_detector(model, imgs):
 
     cfg.data.test.pipeline = replace_ImageToTensor(cfg.data.test.pipeline)
     test_pipeline = Compose(cfg.data.test.pipeline)
-    print("Test Pipeline: ", test_pipeline)
+    # print("Test Pipeline: ", test_pipeline)
     datas = []
     for img in imgs:
         # prepare data
@@ -95,7 +95,7 @@ def inference_detector(model, imgs):
         # build the data pipeline
         data = test_pipeline(data)
         datas.append(data)
-    print("Data: ", datas)
+    # print("Data: ", datas)
     data = collate(datas, samples_per_gpu=len(imgs))
     # just get the actual data from DataContainer
     data['img_metas'] = [img_metas.data[0] for img_metas in data['img_metas']]
