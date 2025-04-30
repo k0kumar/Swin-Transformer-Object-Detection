@@ -10,6 +10,7 @@ from .bbox_heads import (BBoxHead, ConvFCBBoxHead,
 #                          FusedSemanticHead, GlobalContextHead, GridHead,
 #                          HTCMaskHead, MaskIoUHead, MaskPointHead,
 #                          SCNetMaskHead, SCNetSemanticHead)
+from .mask_heads import FCNMaskHead
 # from .mask_scoring_roi_head import MaskScoringRoIHead
 # from .pisa_roi_head import PISARoIHead
 # from .point_rend_roi_head import PointRendRoIHead
@@ -35,5 +36,5 @@ from .standard_roi_head import StandardRoIHead
 __all__ = [
     'BaseRoIHead','BBoxHead',
     'ConvFCBBoxHead', 'Shared2FCBBoxHead', 'StandardRoIHead',
-    'Shared4Conv1FCBBoxHead','SingleRoIExtractor',
+    'Shared4Conv1FCBBoxHead','SingleRoIExtractor','FCNMaskHead',
 ]
