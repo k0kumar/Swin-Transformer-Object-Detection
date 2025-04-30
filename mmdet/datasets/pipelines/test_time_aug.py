@@ -1,6 +1,7 @@
 import warnings
 
 import mmcv
+import mmengine
 
 from ..builder import PIPELINES
 from .compose import Compose
@@ -62,7 +63,7 @@ class MultiScaleFlipAug(object):
             self.img_scale = img_scale if isinstance(img_scale,
                                                      list) else [img_scale]
             self.scale_key = 'scale'
-            assert mmcv.is_list_of(self.img_scale, tuple)
+            assert mmengine.is_list_of(self.img_scale, tuple)
         else:
             self.img_scale = scale_factor if isinstance(
                 scale_factor, list) else [scale_factor]
@@ -71,7 +72,7 @@ class MultiScaleFlipAug(object):
         self.flip = flip
         self.flip_direction = flip_direction if isinstance(
             flip_direction, list) else [flip_direction]
-        assert mmcv.is_list_of(self.flip_direction, str)
+        assert mmengine.is_list_of(self.flip_direction, str)
         if not self.flip and self.flip_direction != ['horizontal']:
             warnings.warn(
                 'flip_direction has no effect when flip is set to False')
