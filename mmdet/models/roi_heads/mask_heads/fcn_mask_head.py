@@ -283,6 +283,8 @@ class FCNMaskHead(nn.Module):
             mask_pred = mask_pred[range(N), labels][:, None]
 
         for inds in chunks:
+            mask_pred = mask_pred.to(inds.device)
+            bboxes = bboxes.to(inds.device)
             masks_chunk, spatial_inds = _do_paste_mask(
                 mask_pred[inds],
                 bboxes[inds],
