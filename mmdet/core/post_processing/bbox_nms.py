@@ -63,8 +63,9 @@ def multiclass_nms(multi_bboxes,
 
     if not torch.onnx.is_in_onnx_export():
         # NonZero not supported  in TensorRT
-        inds = valid_mask.nonzero(as_tuple=False).squeeze(1).detach().cpu()
-        bboxes, scores, labels = bboxes.cpu()[inds], scores.cpu()[inds], labels.cpu()[inds]
+        inds = valid_mask.nonzero(as_tuple=False).squeeze(1)
+        labels = labels.to(inds.device)
+        bboxes, scores, labels = bboxes[inds], scores[inds], labels[inds]
     else:
         # TensorRT NMS plugin has invalid output filled with -1
         # add dummy data to make detection output correct.
